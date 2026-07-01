@@ -260,6 +260,17 @@ export default function DashboardPage() {
             <DialogTitle>Internal Fund Movement</DialogTitle>
           </DialogHeader>
           <div className="space-y-4 py-4">
+            <div className="grid grid-cols-2 gap-4 bg-muted/40 p-3 rounded-lg border text-sm">
+              <div>
+                <span className="text-xs font-semibold text-muted-foreground uppercase block">Source Account</span>
+                <span className="font-bold">Working Account</span>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-muted-foreground uppercase block">Destination Account</span>
+                <span className="font-bold">Utility Account</span>
+              </div>
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="amount">Amount to Transfer (KES)</Label>
               <Input
@@ -270,7 +281,7 @@ export default function DashboardPage() {
                 onChange={(e) => setMoveFundsAmount(e.target.value)}
               />
               <p className="text-xs text-muted-foreground">
-                This triggers a fund movement between SasaPay utility/settlement and working channels.
+                This triggers an internal liquidity transfer directly within the SasaPay gateway channels.
               </p>
             </div>
           </div>
