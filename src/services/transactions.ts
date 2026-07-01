@@ -41,4 +41,12 @@ export const transactionsApi = {
     const query = searchParams.toString();
     return `${BASE}/bulk-payouts/${query ? '?' + query : ''}`;
   },
+
+  sasapayBalance: () => {
+    return `${BASE}/sasapay/balance`;
+  },
+
+  sasapayMoveFunds: () => {
+    return `${BASE}/sasapay/move-funds`;
+  },
 };
