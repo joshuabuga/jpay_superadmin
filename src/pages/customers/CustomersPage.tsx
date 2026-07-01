@@ -41,7 +41,7 @@ export default function CustomersPage() {
     {
       header: "Created",
       accessor: (row: Customer) =>
-        row.created_at ? new Date(row.created_at).toLocaleDateString() : "-",
+        row.created_at ? new Date(row.created_at).toLocaleString() : "-",
     },
   ];
 
