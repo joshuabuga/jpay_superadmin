@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { usePaginatedQuery } from "@/hooks/usePaginatedQuery";
 import { customersApi } from "@/services/customers";
 import { Customer } from "@/types";
@@ -10,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
 export default function CustomersPage() {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [merchantId, setMerchantId] = useState("");
@@ -69,6 +71,7 @@ export default function CustomersPage() {
         page={page}
         totalCount={data?.count || 0}
         onPageChange={setPage}
+        onRowClick={(row) => navigate(`/customers/${row.id}`)}
       />
     </div>
   );

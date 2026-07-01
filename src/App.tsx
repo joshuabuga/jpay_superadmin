@@ -17,6 +17,7 @@ import PayoutsPage from "@/pages/transactions/PayoutsPage";
 import SettlementsPage from "@/pages/settlements/SettlementsPage";
 import SettlementDetailPage from "@/pages/settlements/SettlementDetailPage";
 import CustomersPage from "@/pages/customers/CustomersPage";
+import CustomerDetailPage from "@/pages/customers/CustomerDetailPage";
 import AuditLogPage from "@/pages/audit/AuditLogPage";
 
 const queryClient = new QueryClient({
@@ -53,6 +54,7 @@ function App() {
               <Route path="settlements" element={<SettlementsPage />} />
               <Route path="settlements/:id" element={<SettlementDetailPage />} />
               <Route path="customers" element={<CustomersPage />} />
+              <Route path="customers/:id" element={<CustomerDetailPage />} />
               <Route path="audit-logs" element={<AuditLogPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
