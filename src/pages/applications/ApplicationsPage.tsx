@@ -14,7 +14,7 @@ export default function ApplicationsPage() {
   const [statusFilter, setStatusFilter] = useState<string>("");
 
   const params: Record<string, any> = { page };
-  if (statusFilter) params.status = statusFilter;
+  if (statusFilter) params.profile_status = statusFilter;
 
   const { data, isLoading } = usePaginatedQuery<Merchant>(
     ["applications", page, statusFilter],
