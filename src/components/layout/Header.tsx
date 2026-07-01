@@ -36,7 +36,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           <Menu className="w-5 h-5" />
         </Button>
         <h2 className="text-lg font-semibold text-foreground hidden sm:block">
-          Super Admin Dashboard
+          Backoffice Console
         </h2>
       </div>
 

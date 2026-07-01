@@ -80,7 +80,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-sidebar-border">
-          <p className="text-xs text-sidebar-foreground/50">Super Admin Panel</p>
+          <p className="text-xs text-sidebar-foreground/50">Backoffice Portal</p>
         </div>
       </aside>
     </>
