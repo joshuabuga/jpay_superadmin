@@ -57,7 +57,12 @@ export default function DashboardPage() {
     analyticsApi.overview()
   );
 
-  const { data: sasaPay, isLoading: isSasaPayLoading, refetch: refetchSasaPay } = useApiQuery<{
+  const {
+    data: sasaPay,
+    isLoading: isSasaPayLoading,
+    isFetching: isSasaPayFetching,
+    refetch: refetchSasaPay,
+  } = useApiQuery<{
     status?: boolean;
     statusCode: string;
     message?: string;
@@ -196,16 +201,16 @@ export default function DashboardPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => refetchSasaPay()}
-                disabled={isSasaPayLoading}
+                disabled={isSasaPayFetching}
               >
-                <RefreshCw className={`w-4 h-4 mr-2 ${isSasaPayLoading ? "animate-spin" : ""}`} />
+                <RefreshCw className={`w-4 h-4 mr-2 ${isSasaPayFetching ? "animate-spin" : ""}`} />
                 Refresh
               </Button>
               <Button
                 variant="default"
                 size="sm"
                 onClick={() => setMoveFundsOpen(true)}
-                disabled={isSasaPayLoading}
+                disabled={isSasaPayFetching}
               >
                 <ArrowRightLeft className="w-4 h-4 mr-2" />
                 Move Funds
