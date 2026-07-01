@@ -58,8 +58,10 @@ export default function DashboardPage() {
   );
 
   const { data: sasaPay, isLoading: isSasaPayLoading, refetch: refetchSasaPay } = useApiQuery<{
+    status?: boolean;
     statusCode: string;
-    message: string;
+    message?: string;
+    detail?: string;
     data: {
       CurrencyCode: string;
       OrgAccountBalance: number;
