@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import jpayLogoLight from "@/assets/jpay-logo-light.png";
 import {
   LayoutDashboard,
   Building2,
@@ -48,10 +49,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         {/* Logo */}
         <div className="flex items-center justify-between h-16 px-6 border-b border-sidebar-border">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-sidebar-primary flex items-center justify-center">
-              <span className="text-white font-bold text-sm">J</span>
-            </div>
-            <span className="font-semibold text-lg">JPay Admin</span>
+            <img src={jpayLogoLight} alt="JPay Admin" className="h-8 w-auto object-contain" />
           </div>
           <button onClick={onClose} className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground">
             <X className="w-5 h-5" />

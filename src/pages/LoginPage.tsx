@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import jpayLogo from "@/assets/jpay-logo-new.png";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -29,8 +30,8 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-            <span className="text-white font-bold text-xl">J</span>
+          <div className="flex justify-center mb-4">
+            <img src={jpayLogo} alt="JPay Logo" className="h-10 w-auto object-contain" />
           </div>
           <CardTitle className="text-2xl">Super Admin</CardTitle>
           <CardDescription>Sign in to the JPay admin dashboard</CardDescription>

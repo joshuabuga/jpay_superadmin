@@ -50,7 +50,7 @@ export function DataTable<T extends { id: number }>({
 
   return (
     <div>
-      <div className="rounded-md border">
+      <div className="rounded-md border overflow-x-auto w-full custom-scrollbar">
         <Table>
           <TableHeader>
             <TableRow>
@@ -90,7 +90,7 @@ export function DataTable<T extends { id: number }>({
       </div>
 
       {totalPages > 1 && (
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-4 text-center sm:text-left">
           <p className="text-sm text-muted-foreground">
             Showing {(page - 1) * pageSize + 1} to {Math.min(page * pageSize, totalCount)} of {totalCount}
           </p>
